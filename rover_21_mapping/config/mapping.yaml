@@ -1,0 +1,23 @@
+RoverMapping:
+  fixed_frame: "map"
+  width: 1000
+  height: 1000
+  resolution: 0.05
+
+  costmap_update_rate: 2
+
+  odom_topic: "/odometry/filtered_map"
+  scan_topic: "/scan"
+
+  Costmap:
+    total_cost_r: 1
+    lethal_cost_r: 0.8
+    max_cost: 100
+    min_cost: 1
+    publish_topic: "/rover_mapping/inflated_map"
+
+  OccupancyMap:
+    log_free: -25 
+    log_occ: 25
+    occupied_treshold: 50 
+    publish_topic: "/rover_mapping/map"

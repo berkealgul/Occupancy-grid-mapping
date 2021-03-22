@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+	<rosparam file="$(find rover_21_mapping)/config/mapping.yaml" command="load" />
+	<node name="mapping" pkg="rover_21_mapping" type="mapping" respawn="false" output="screen" />
+</launch>
